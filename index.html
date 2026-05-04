@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>𝕽𝖆𝖓𝖉𝖔𝖒 𝕱𝖔𝖓𝖙 𝖂𝖎𝖟𝖆𝖗𝖉 | Generator Aksara Ajaib</title>
+    <title>𝕽𝖆𝖓𝖉𝖔𝖒 𝕱𝖔𝖓𝖙 ✦ 𝕬𝖗𝖗𝖔𝖜 𝖂𝖎𝖟𝖆𝖗𝖉</title>
     <style>
         * {
             margin: 0;
@@ -17,13 +17,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, 'Roboto', sans-serif;
             padding: 1.5rem;
         }
 
-        /* Kaca mystical */
         .grimoire {
-            max-width: 880px;
+            max-width: 920px;
             width: 100%;
             background: rgba(15, 20, 30, 0.65);
             backdrop-filter: blur(14px);
@@ -63,7 +62,6 @@
             letter-spacing: 1px;
         }
 
-        /* area teks utama */
         .display-area {
             background: #020617cc;
             border-radius: 2rem;
@@ -75,20 +73,19 @@
 
         .magic-text {
             font-size: 2rem;
-            line-height: 1.4;
+            line-height: 1.5;
             word-break: break-word;
             text-align: center;
             font-weight: 500;
             transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            min-height: 6rem;
-            padding: 0.7rem;
+            min-height: 7rem;
+            padding: 0.9rem;
             background: rgba(0, 0, 0, 0.3);
             border-radius: 1.5rem;
             font-family: inherit;
             color: #f0eef7;
         }
 
-        /* tombol sakti */
         .spell-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -102,7 +99,7 @@
             border: 1px solid #a28bcb;
             color: #f2e9ff;
             padding: 0.8rem 1.9rem;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: bold;
             border-radius: 60px;
             cursor: pointer;
@@ -126,7 +123,6 @@
             transform: translateY(2px);
         }
 
-        /* area input user */
         .user-cauldron {
             background: #0e0a1ac9;
             border-radius: 2rem;
@@ -167,7 +163,6 @@
             box-shadow: 0 0 12px #aa88ff60;
         }
 
-        /* tombol kecil */
         .small-rune {
             background: #2f2446;
             border: none;
@@ -183,7 +178,6 @@
             background: #5d4489;
         }
 
-        /* efek font sample */
         .sample-words {
             display: flex;
             flex-wrap: wrap;
@@ -210,6 +204,19 @@
             transform: scale(0.96);
         }
 
+        .feature-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #1e1733aa;
+            border-radius: 70px;
+            padding: 5px 12px;
+            font-size: 0.7rem;
+            color: #bdadff;
+            margin-top: 10px;
+            backdrop-filter: blur(2px);
+        }
+
         footer {
             font-size: 0.7rem;
             text-align: center;
@@ -232,14 +239,13 @@
             }
         }
 
-        /* efek acak */
         .glint {
-            animation: shimmer 0.2s ease-out;
+            animation: shimmer 0.23s ease-out;
         }
 
         @keyframes shimmer {
             0% { text-shadow: 0 0 0px transparent; opacity: 0.9;}
-            50% { text-shadow: 0 0 8px #ffd6ff; }
+            50% { text-shadow: 0 0 10px #ffd6ff, 0 0 4px #c79aff; }
             100% { text-shadow: 0 0 0px transparent; }
         }
     </style>
@@ -249,11 +255,11 @@
 <div class="grimoire">
     <h1>
         <span>🍷⃟༑⌁⃰</span> 
-        <span>ꜰᴏɴᴛ ᴄʜᴀᴏꜱ</span> 
+        <span>ꜰᴏɴᴛ ᴄʜᴀᴏꜱ ➵ ᴀʀʀᴏᴡ</span> 
         <span>ꦾ࣯༑</span>
     </h1>
     <div style="text-align: center;">
-        <div class="sub">✧  riuhkan aksara dengan gaya tak terduga  ✧</div>
+        <div class="sub">✧  aksara panah misterius di sela-sela kata  ✧</div>
     </div>
 
     <div class="display-area">
@@ -264,13 +270,14 @@
 
     <div class="spell-buttons">
         <button class="btn-rune" id="randomFontBtn">🌀 ᴀᴄᴀᴋ ꜰᴏɴᴛ</button>
+        <button class="btn-rune" id="randomArrowBtn">➹ ᴛᴀᴍʙᴀʜ ᴘᴀɴᴀʜ ᴅɪᴛᴇɴɢᴀʜ</button>
         <button class="btn-rune" id="randomSpecialBtn">✨ ᴛᴀᴍʙᴀʜ ᴀᴋꜱᴀʀᴀ ᴀᴊᴀɪʙ</button>
     </div>
 
     <div class="user-cauldron">
         <div class="label-glow">📜 tulis mantra mu sendiri :</div>
         <div class="input-group">
-            <input type="text" id="userInput" placeholder="contoh: AgataCr4sh atau kata favorit..." value="𝐀𝐠𝐚𝐭𝐚 𝐂𝐫𝟒𝐬𝐡">
+            <input type="text" id="userInput" placeholder="contoh: Agata Cr4sh atau kata favorit..." value="𝐀𝐠𝐚𝐭𝐚 𝐂𝐫𝟒𝐬𝐡">
             <button id="applyUserBtn" class="small-rune">⋆⋅☆⋅⋆ ubah ⋆⋅☆⋅⋆</button>
         </div>
         <div class="sample-words">
@@ -280,24 +287,20 @@
             <span class="chip-word" data-word="𝐖𝐢𝐬𝐩𝐞𝐫⃗⃟🍷⃟">Whisper</span>
             <span class="chip-word" data-word="𝐃𝐞𝐦𝐨𝐧𝐬𝐥𝐚𝐲𝐞𝐫⏤͟͟ꦾ">Demonslayer</span>
         </div>
-        <div style="font-size: 0.7rem; margin-top: 12px; color:#6c5d8a; text-align:center;">⋆  klik kata contoh, lalu tekan 'ubah' atau 'acak font'  ⋆</div>
+        <div style="font-size: 0.7rem; margin-top: 12px; color:#6c5d8a; text-align:center; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+            <span class="feature-badge">➹ panah acak di tengah kata</span>
+            <span class="feature-badge">༑ simbol + aksen ajaib</span>
+        </div>
     </div>
     <footer>
-        ⚡ setiap klik 'acak font' → gaya huruf berubah total (bold, miring, double-struck, script, fraktur, dll)<br>
-        🜁 'tambah aksara ajaib' → menambahkan simbol mistis seperti ༑,⃰,⍣,͢,ꦾ,🍷⃟
+        ⚡ 'acak font' → style huruf berubah total (bold, script, fraktur, dll)<br>
+        🜁 'tambah aksara ajaib' → tambahkan simbol mistis di depan/belakang & tengah<br>
+        ➹ 'panah di tengah' → sisipkan panah unik (➹ ➵ ➛ ➢ ➼ 𖦹 dll) di antara suku kata/kata!
     </footer>
 </div>
 
 <script>
-    // ======================== DAFTAR STYLE UNICODE UNTUK ACAK FONT (BERBAGAI AKSEN) ========================
-    // Kami menyediakan 16+ varian gaya dari huruf latin A-Z a-z yang bisa di-transform.
-    // Beberapa kategori: bold, italic, bold italic, script, fraktur, double-struck, monospace, sans-serif, circled, dll.
-    // Tujuannya seperti efek "𝐀͠𝐠̰ᷬ𝐚⃗" -> kombinasi style + diacritic (nantinya kita juga kombinasikan dengan tanda diakritik random untuk efek ekstra)
-    
-    // Fungsi utama untuk mengubah string biasa menjadi gaya acak dari pustaka mapping
-    // tapi kita juga menyisipkan tanda aksen / simbol ajaib secara opsional (agar mirip contoh)
-    
-    // ---------- Pustaka TRANSFORM HURUF (A-Z a-z) ----------
+    // ======================== GAYA FONT UNICODE & TRANSFORMASI ========================
     const stylesMap = [
         { name: "bold", map: boldMap() },
         { name: "italic", map: italicMap() },
@@ -309,10 +312,9 @@
         { name: "sansSerif", map: sansSerifMap() },
         { name: "sansBold", map: sansBoldMap() },
         { name: "sansItalic", map: sansItalicMap() },
-        { name: "regional", map: regionalMap() },    // circled / parenthesized lucu
+        { name: "regional", map: regionalMap() },
     ];
 
-    // helper: buat mapping sederhana dari char ke char varian
     function buildMapping(uppercaseStart, uppercaseEnd, lowercaseStart, lowercaseEnd, mapperArrayU, mapperArrayL) {
         let map = new Map();
         for (let i = 0; i < 26; i++) {
@@ -324,103 +326,50 @@
         return map;
     }
 
-    function boldMap() {
-        const boldU = ['𝐀','𝐁','𝐂','𝐃','𝐄','𝐅','𝐆','𝐇','𝐈','𝐉','𝐊','𝐋','𝐌','𝐍','𝐎','𝐏','𝐐','𝐑','𝐒','𝐓','𝐔','𝐕','𝐖','𝐗','𝐘','𝐙'];
-        const boldL = ['𝐚','𝐛','𝐜','𝐝','𝐞','𝐟','𝐠','𝐡','𝐢','𝐣','𝐤','𝐥','𝐦','𝐧','𝐨','𝐩','𝐪','𝐫','𝐬','𝐭','𝐮','𝐯','𝐰','𝐱','𝐲','𝐳'];
-        return buildMapping(65,90,97,122, boldU, boldL);
-    }
-    function italicMap() {
-        const itU = ['𝐴','𝐵','𝐶','𝐷','𝐸','𝐹','𝐺','𝐻','𝐼','𝐽','𝐾','𝐿','𝑀','𝑁','𝑂','𝑃','𝑄','𝑅','𝑆','𝑇','𝑈','𝑉','𝑊','𝑋','𝑌','𝑍'];
-        const itL = ['𝑎','𝑏','𝑐','𝑑','𝑒','𝑓','𝑔','ℎ','𝑖','𝑗','𝑘','𝑙','𝑚','𝑛','𝑜','𝑝','𝑞','𝑟','𝑠','𝑡','𝑢','𝑣','𝑤','𝑥','𝑦','𝑧'];
-        return buildMapping(65,90,97,122, itU, itL);
-    }
-    function boldItalicMap() {
-        const biU = ['𝑨','𝑩','𝑪','𝑫','𝑬','𝑭','𝑮','𝑯','𝑰','𝑱','𝑲','𝑳','𝑴','𝑵','𝑶','𝑷','𝑸','𝑹','𝑺','𝑻','𝑼','𝑽','𝑾','𝑿','𝒀','𝒁'];
-        const biL = ['𝒂','𝒃','𝒄','𝒅','𝒆','𝒇','𝒈','𝒉','𝒊','𝒋','𝒌','𝒍','𝒎','𝒏','𝒐','𝒑','𝒒','𝒓','𝒔','𝒕','𝒖','𝒗','𝒘','𝒙','𝒚','𝒛'];
-        return buildMapping(65,90,97,122, biU, biL);
-    }
-    function scriptMap() {
-        const scU = ['𝒜','ℬ','𝒞','𝒟','ℰ','ℱ','𝒢','ℋ','ℐ','𝒥','𝒦','ℒ','ℳ','𝒩','𝒪','𝒫','𝒬','ℛ','𝒮','𝒯','𝒰','𝒱','𝒲','𝒳','𝒴','𝒵'];
-        const scL = ['𝒶','𝒷','𝒸','𝒹','ℯ','𝒻','ℊ','𝒽','𝒾','𝒿','𝓀','𝓁','𝓂','𝓃','ℴ','𝓅','𝓆','𝓇','𝓈','𝓉','𝓊','𝓋','𝓌','𝓍','𝓎','𝓏'];
-        return buildMapping(65,90,97,122, scU, scL);
-    }
-    function frakturMap() {
-        const frU = ['𝔄','𝔅','ℭ','𝔇','𝔈','𝔉','𝔊','ℌ','ℑ','𝔍','𝔎','𝔏','𝔐','𝔑','𝔒','𝔓','𝔔','ℜ','𝔖','𝔗','𝔘','𝔙','𝔚','𝔛','𝔜','ℨ'];
-        const frL = ['𝔞','𝔟','𝔠','𝔡','𝔢','𝔣','𝔤','𝔥','𝔦','𝔧','𝔨','𝔩','𝔪','𝔫','𝔬','𝔭','𝔮','𝔯','𝔰','𝔱','𝔲','𝔳','𝔴','𝔵','𝔶','𝔷'];
-        return buildMapping(65,90,97,122, frU, frL);
-    }
-    function doubleStruckMap() {
-        const dsU = ['𝔸','𝔹','ℂ','𝔻','𝔼','𝔽','𝔾','ℍ','𝕀','𝕁','𝕂','𝕃','𝕄','ℕ','𝕆','ℙ','ℚ','ℝ','𝕊','𝕋','𝕌','𝕍','𝕎','𝕏','𝕐','ℤ'];
-        const dsL = ['𝕒','𝕓','𝕔','𝕕','𝕖','𝕗','𝕘','𝕙','𝕚','𝕛','𝕜','𝕝','𝕞','𝕟','𝕠','𝕡','𝕢','𝕣','𝕤','𝕥','𝕦','𝕧','𝕨','𝕩','𝕪','𝕫'];
-        return buildMapping(65,90,97,122, dsU, dsL);
-    }
-    function monospaceMap() {
-        const monoU = ['𝙰','𝙱','𝙲','𝙳','𝙴','𝙵','𝙶','𝙷','𝙸','𝙹','𝙺','𝙻','𝙼','𝙽','𝙾','𝙿','𝚀','𝚁','𝚂','𝚃','𝚄','𝚅','𝚆','𝚇','𝚈','𝚉'];
-        const monoL = ['𝚊','𝚋','𝚌','𝚍','𝚎','𝚏','𝚐','𝚑','𝚒','𝚓','𝚔','𝚕','𝚖','𝚗','𝚘','𝚙','𝚚','𝚛','𝚜','𝚝','𝚞','𝚟','𝚠','𝚡','𝚢','𝚣'];
-        return buildMapping(65,90,97,122, monoU, monoL);
-    }
-    function sansSerifMap() {
-        const ssU = ['𝖠','𝖡','𝖢','𝖣','𝖤','𝖥','𝖦','𝖧','𝖨','𝖩','𝖪','𝖫','𝖬','𝖭','𝖮','𝖯','𝖰','𝖱','𝖲','𝖳','𝖴','𝖵','𝖶','𝖷','𝖸','𝖹'];
-        const ssL = ['𝖺','𝖻','𝖼','𝖽','𝖾','𝖿','𝗀','𝗁','𝗂','𝗃','𝗄','𝗅','𝗆','𝗇','𝗈','𝗉','𝗊','𝗋','𝗌','𝗍','𝗎','𝗏','𝗐','𝗑','𝗒','𝗓'];
-        return buildMapping(65,90,97,122, ssU, ssL);
-    }
-    function sansBoldMap() {
-        const sbU = ['𝗔','𝗕','𝗖','𝗗','𝗘','𝗙','𝗚','𝗛','𝗜','𝗝','𝗞','𝗟','𝗠','𝗡','𝗢','𝗣','𝗤','𝗥','𝗦','𝗧','𝗨','𝗩','𝗪','𝗫','𝗬','𝗭'];
-        const sbL = ['𝗮','𝗯','𝗰','𝗱','𝗲','𝗳','𝗴','𝗵','𝗶','𝗷','𝗸','𝗹','𝗺','𝗻','𝗼','𝗽','𝗾','𝗿','𝘀','𝘁','𝘂','𝘃','𝘄','𝘅','𝘆','𝘇'];
-        return buildMapping(65,90,97,122, sbU, sbL);
-    }
-    function sansItalicMap() {
-        const siU = ['𝘈','𝘉','𝘊','𝘋','𝘌','𝘍','𝘎','𝘏','𝘐','𝘑','𝘒','𝘓','𝘔','𝘕','𝘖','𝘗','𝘘','𝘙','𝘚','𝘛','𝘜','𝘝','𝘞','𝘟','𝘠','𝘡'];
-        const siL = ['𝘢','𝘣','𝘤','𝘥','𝘦','𝘧','𝘨','𝘩','𝘪','𝘫','𝘬','𝘭','𝘮','𝘯','𝘰','𝘱','𝘲','𝘳','𝘴','𝘵','𝘶','𝘷','𝘸','𝘹','𝘺','𝘻'];
-        return buildMapping(65,90,97,122, siU, siL);
-    }
-    function regionalMap() {
-        // circled & parenthesized & sebagian special (tidak komplit untuk semua huruf, tapi seru)
-        const circU = ['🄰','🄱','🄲','🄳','🄴','🄵','🄶','🄷','🄸','🄹','🄺','🄻','🄼','🄽','🄾','🄿','🅀','🅁','🅂','🅃','🅄','🅅','🅆','🅇','🅈','🅉'];
-        const circL = ['🅐','🅑','🅒','🅓','🅔','🅕','🅖','🅗','🅘','🅙','🅚','🅛','🅜','🅝','🅞','🅟','🅠','🅡','🅢','🅣','🅤','🅥','🅦','🅧','🅨','🅩'];
-        return buildMapping(65,90,97,122, circU, circL);
-    }
+    function boldMap() { const U = ['𝐀','𝐁','𝐂','𝐃','𝐄','𝐅','𝐆','𝐇','𝐈','𝐉','𝐊','𝐋','𝐌','𝐍','𝐎','𝐏','𝐐','𝐑','𝐒','𝐓','𝐔','𝐕','𝐖','𝐗','𝐘','𝐙']; const L = ['𝐚','𝐛','𝐜','𝐝','𝐞','𝐟','𝐠','𝐡','𝐢','𝐣','𝐤','𝐥','𝐦','𝐧','𝐨','𝐩','𝐪','𝐫','𝐬','𝐭','𝐮','𝐯','𝐰','𝐱','𝐲','𝐳']; return buildMapping(65,90,97,122, U, L); }
+    function italicMap() { const U = ['𝐴','𝐵','𝐶','𝐷','𝐸','𝐹','𝐺','𝐻','𝐼','𝐽','𝐾','𝐿','𝑀','𝑁','𝑂','𝑃','𝑄','𝑅','𝑆','𝑇','𝑈','𝑉','𝑊','𝑋','𝑌','𝑍']; const L = ['𝑎','𝑏','𝑐','𝑑','𝑒','𝑓','𝑔','ℎ','𝑖','𝑗','𝑘','𝑙','𝑚','𝑛','𝑜','𝑝','𝑞','𝑟','𝑠','𝑡','𝑢','𝑣','𝑤','𝑥','𝑦','𝑧']; return buildMapping(65,90,97,122, U, L); }
+    function boldItalicMap() { const U = ['𝑨','𝑩','𝑪','𝑫','𝑬','𝑭','𝑮','𝑯','𝑰','𝑱','𝑲','𝑳','𝑴','𝑵','𝑶','𝑷','𝑸','𝑹','𝑺','𝑻','𝑼','𝑽','𝑾','𝑿','𝒀','𝒁']; const L = ['𝒂','𝒃','𝒄','𝒅','𝒆','𝒇','𝒈','𝒉','𝒊','𝒋','𝒌','𝒍','𝒎','𝒏','𝒐','𝒑','𝒒','𝒓','𝒔','𝒕','𝒖','𝒗','𝒘','𝒙','𝒚','𝒛']; return buildMapping(65,90,97,122, U, L); }
+    function scriptMap() { const U = ['𝒜','ℬ','𝒞','𝒟','ℰ','ℱ','𝒢','ℋ','ℐ','𝒥','𝒦','ℒ','ℳ','𝒩','𝒪','𝒫','𝒬','ℛ','𝒮','𝒯','𝒰','𝒱','𝒲','𝒳','𝒴','𝒵']; const L = ['𝒶','𝒷','𝒸','𝒹','ℯ','𝒻','ℊ','𝒽','𝒾','𝒿','𝓀','𝓁','𝓂','𝓃','ℴ','𝓅','𝓆','𝓇','𝓈','𝓉','𝓊','𝓋','𝓌','𝓍','𝓎','𝓏']; return buildMapping(65,90,97,122, U, L); }
+    function frakturMap() { const U = ['𝔄','𝔅','ℭ','𝔇','𝔈','𝔉','𝔊','ℌ','ℑ','𝔍','𝔎','𝔏','𝔐','𝔑','𝔒','𝔓','𝔔','ℜ','𝔖','𝔗','𝔘','𝔙','𝔚','𝔛','𝔜','ℨ']; const L = ['𝔞','𝔟','𝔠','𝔡','𝔢','𝔣','𝔤','𝔥','𝔦','𝔧','𝔨','𝔩','𝔪','𝔫','𝔬','𝔭','𝔮','𝔯','𝔰','𝔱','𝔲','𝔳','𝔴','𝔵','𝔶','𝔷']; return buildMapping(65,90,97,122, U, L); }
+    function doubleStruckMap() { const U = ['𝔸','𝔹','ℂ','𝔻','𝔼','𝔽','𝔾','ℍ','𝕀','𝕁','𝕂','𝕃','𝕄','ℕ','𝕆','ℙ','ℚ','ℝ','𝕊','𝕋','𝕌','𝕍','𝕎','𝕏','𝕐','ℤ']; const L = ['𝕒','𝕓','𝕔','𝕕','𝕖','𝕗','𝕘','𝕙','𝕚','𝕛','𝕜','𝕝','𝕞','𝕟','𝕠','𝕡','𝕢','𝕣','𝕤','𝕥','𝕦','𝕧','𝕨','𝕩','𝕪','𝕫']; return buildMapping(65,90,97,122, U, L); }
+    function monospaceMap() { const U = ['𝙰','𝙱','𝙲','𝙳','𝙴','𝙵','𝙶','𝙷','𝙸','𝙹','𝙺','𝙻','𝙼','𝙽','𝙾','𝙿','𝚀','𝚁','𝚂','𝚃','𝚄','𝚅','𝚆','𝚇','𝚈','𝚉']; const L = ['𝚊','𝚋','𝚌','𝚍','𝚎','𝚏','𝚐','𝚑','𝚒','𝚓','𝚔','𝚕','𝚖','𝚗','𝚘','𝚙','𝚚','𝚛','𝚜','𝚝','𝚞','𝚟','𝚠','𝚡','𝚢','𝚣']; return buildMapping(65,90,97,122, U, L); }
+    function sansSerifMap() { const U = ['𝖠','𝖡','𝖢','𝖣','𝖤','𝖥','𝖦','𝖧','𝖨','𝖩','𝖪','𝖫','𝖬','𝖭','𝖮','𝖯','𝖰','𝖱','𝖲','𝖳','𝖴','𝖵','𝖶','𝖷','𝖸','𝖹']; const L = ['𝖺','𝖻','𝖼','𝖽','𝖾','𝖿','𝗀','𝗁','𝗂','𝗃','𝗄','𝗅','𝗆','𝗇','𝗈','𝗉','𝗊','𝗋','𝗌','𝗍','𝗎','𝗏','𝗐','𝗑','𝗒','𝗓']; return buildMapping(65,90,97,122, U, L); }
+    function sansBoldMap() { const U = ['𝗔','𝗕','𝗖','𝗗','𝗘','𝗙','𝗚','𝗛','𝗜','𝗝','𝗞','𝗟','𝗠','𝗡','𝗢','𝗣','𝗤','𝗥','𝗦','𝗧','𝗨','𝗩','𝗪','𝗫','𝗬','𝗭']; const L = ['𝗮','𝗯','𝗰','𝗱','𝗲','𝗳','𝗴','𝗵','𝗶','𝗷','𝗸','𝗹','𝗺','𝗻','𝗼','𝗽','𝗾','𝗿','𝘀','𝘁','𝘂','𝘃','𝘄','𝘅','𝘆','𝘇']; return buildMapping(65,90,97,122, U, L); }
+    function sansItalicMap() { const U = ['𝘈','𝘉','𝘊','𝘋','𝘌','𝘍','𝘎','𝘏','𝘐','𝘑','𝘒','𝘓','𝘔','𝘕','𝘖','𝘗','𝘘','𝘙','𝘚','𝘛','𝘜','𝘝','𝘞','𝘟','𝘠','𝘡']; const L = ['𝘢','𝘣','𝘤','𝘥','𝘦','𝘧','𝘨','𝘩','𝘪','𝘫','𝘬','𝘭','𝘮','𝘯','𝘰','𝘱','𝘲','𝘳','𝘴','𝘵','𝘶','𝘷','𝘸','𝘹','𝘺','𝘻']; return buildMapping(65,90,97,122, U, L); }
+    function regionalMap() { const U = ['🄰','🄱','🄲','🄳','🄴','🄵','🄶','🄷','🄸','🄹','🄺','🄻','🄼','🄽','🄾','🄿','🅀','🅁','🅂','🅃','🅄','🅅','🅆','🅇','🅈','🅉']; const L = ['🅐','🅑','🅒','🅓','🅔','🅕','🅖','🅗','🅘','🅙','🅚','🅛','🅜','🅝','🅞','🅟','🅠','🅡','🅢','🅣','🅤','🅥','🅦','🅧','🅨','🅩']; return buildMapping(65,90,97,122, U, L); }
 
-    // daftar aksen / simbol dekoratif yang bisa diselipkan (seperti contoh: ༑, ⌁⃰, ⍣, ͢, ꧁, ꧂, 🍷⃟, ࣯, dll)
-    const magicalSymbols = [
-        "༑", "⌁⃰", "⍣", "͢", "ꦾ", "🍷⃟", "࣯", "⃰", "⏤͟͟", "꧁", "꧂", "༒", "𓆩", "𓆪", "🜁", "🜂", "☯", "⛧", "✧", "⋆", "⭒", "٭"
+    // simbol ajaib
+    const magicalSymbols = ["༑", "⌁⃰", "⍣", "͢", "ꦾ", "🍷⃟", "࣯", "⃰", "⏤͟͟", "꧁", "꧂", "༒", "𓆩", "𓆪", "🜁", "🜂", "☯", "⛧", "✧", "⋆", "⭒", "٭", "⃟", "͜͡"];
+
+    // 🔥 KOLEKSI PANAH UNIK + SIMBOL SELA (BISA DISISIPKAN DI TENGAH KATA)
+    const arrowSymbols = [
+        "➹", "➵", "➛", "➢", "➼", "➳", "⇢", "⇝", "↝", "↣", "↬", "⤚", "⤛", "⤜", "⤞", "⤟", "⤠", "𖦹➤", "⌁", "🡒", "🡖", "🢒", "⟿", "⤳", "⤴", "⤵", "ꜜ", "ꜛ", "➺", "𖤍➙"
     ];
-    
-    // fungsi mengganti teks ke style acak (pilih random style dari stylesMap)
+
+    // fungsi apply gaya font random
     function applyRandomFontStyle(inputText) {
-        if (!inputText) return "🍷⃟༑⌁⃰𝐀𝐠𝐚𝐭𝐚⍣𝐜𝐫𝟒𝐬𝐡͢ꦾ";
+        if (!inputText || inputText.trim() === "") return "🍷⃟༑⌁⃰𝐀𝐠𝐚𝐭𝐚⍣𝐜𝐫𝟒𝐬𝐡͢ꦾ";
         const randomStyle = stylesMap[Math.floor(Math.random() * stylesMap.length)];
         const mapper = randomStyle.map;
         let result = "";
         for (let ch of inputText) {
-            // coba mapping huruf latin A-Z a-z
-            if (mapper.has(ch)) {
-                result += mapper.get(ch);
-            } else {
-                // angka, spasi, tanda baca tetap asli
-                result += ch;
-            }
+            if (mapper.has(ch)) result += mapper.get(ch);
+            else result += ch;
         }
-        // kadang tambahkan aksen ringan di akhir atau tengah? tapi biar lebih opsi 'tambah aksara ajaib' khusus
         return result;
     }
-    
-    // menambah aksen ajaib di sekitar teks (depan, belakang, diantara kata)
+
+    // fungsi tambah aksara ajaib (depan, belakang, dan sisipan random)
     function addMagicalAccents(originalStyledText) {
-        // Dapatkan 2~4 simbol random
-        let numSymbolsFront = Math.floor(Math.random() * 2) + 1;   // 1-2
-        let numSymbolsBack = Math.floor(Math.random() * 2) + 1;
         let frontSymbols = "", backSymbols = "";
-        for (let i = 0; i < numSymbolsFront; i++) {
-            frontSymbols += magicalSymbols[Math.floor(Math.random() * magicalSymbols.length)];
-        }
-        for (let i = 0; i < numSymbolsBack; i++) {
-            backSymbols += magicalSymbols[Math.floor(Math.random() * magicalSymbols.length)];
-        }
-        // sisipkan juga kemungkinan sisip di tengah kata (split spasi)
+        let frontCount = Math.floor(Math.random() * 2) + 1;
+        let backCount = Math.floor(Math.random() * 2) + 1;
+        for (let i = 0; i < frontCount; i++) frontSymbols += magicalSymbols[Math.floor(Math.random() * magicalSymbols.length)];
+        for (let i = 0; i < backCount; i++) backSymbols += magicalSymbols[Math.floor(Math.random() * magicalSymbols.length)];
+        
         let words = originalStyledText.split(/(\s+)/);
         let processedWords = words.map(part => {
-            if (part.trim().length > 0 && Math.random() > 0.6) {
+            if (part.trim().length > 0 && Math.random() > 0.55) {
                 let randomSym = magicalSymbols[Math.floor(Math.random() * magicalSymbols.length)];
                 return randomSym + part + randomSym;
             }
@@ -429,84 +378,150 @@
         let middleFixed = processedWords.join('');
         return frontSymbols + middleFixed + backSymbols;
     }
+
+    /**
+     * FUNGSI UTAMA: TAMBAHKAN PANAH DI TENGAH-TENGAH KATA
+     * - Memisahkan teks berdasarkan spasi, lalu pada setiap kata yang panjangnya minimal 2 huruf,
+     *   sisipkan simbol panah secara acak di antara karakter (bisa tengah kata, atau setelah awalan).
+     * - Juga bisa menyisipkan di antara dua kata (di spasi) untuk efek lebih chaos.
+     */
+    function insertArrowsInMiddle(text) {
+        if (!text) return "➹✨𝐀𝐠𝐚𝐭𝐚✨➹";
+        // pisahkan menjadi kata dan spasi
+        let segments = text.split(/(\s+)/);
+        let resultSegments = [];
+        
+        for (let seg of segments) {
+            // jika seg adalah spasi (white space)
+            if (seg.trim() === "") {
+                // ada kemungkinan menambah panah juga di sela antar kata?
+                if (Math.random() > 0.7) {
+                    let randomArrow = arrowSymbols[Math.floor(Math.random() * arrowSymbols.length)];
+                    resultSegments.push(" " + randomArrow + " ");
+                } else {
+                    resultSegments.push(seg);
+                }
+                continue;
+            }
+            
+            // proses kata (tidak kosong)
+            let word = seg;
+            if (word.length <= 1) {
+                resultSegments.push(word);
+                continue;
+            }
+            
+            // pilih posisi penyisipan: antara 1 sampai length-1 (tengah-tengah)
+            // bisa sisip di beberapa tempat? opsional: sisip 1~2 panah dalam satu kata
+            let insertions = Math.floor(Math.random() * 2) + 1; // 1 atau 2 panah di satu kata
+            let wordChars = [...word]; // array of characters (termasuk karakter unicode)
+            if (wordChars.length < 2) {
+                resultSegments.push(word);
+                continue;
+            }
+            
+            for (let i = 0; i < insertions; i++) {
+                // pilih posisi secara acak di antara karakter (tidak di paling ujung)
+                let maxPos = wordChars.length - 1;
+                if (maxPos < 1) break;
+                let pos = Math.floor(Math.random() * maxPos); // 0 .. length-2, menyisipkan setelah index pos
+                if (pos >= wordChars.length) pos = wordChars.length - 1;
+                let randomArrow = arrowSymbols[Math.floor(Math.random() * arrowSymbols.length)];
+                // sisipkan simbol panah di antara dua karakter
+                wordChars.splice(pos + 1, 0, randomArrow);
+            }
+            resultSegments.push(wordChars.join(''));
+        }
+        
+        let finalText = resultSegments.join('');
+        // sedikit poles: kadang tambah panah di awal/akhir biar makin seru?
+        if (Math.random() > 0.6) {
+            let extraArrow = arrowSymbols[Math.floor(Math.random() * arrowSymbols.length)];
+            finalText = extraArrow + finalText + extraArrow;
+        }
+        return finalText;
+    }
     
-    // ------------------------ ELEMEN DAN EVENT -------------------------
+    // ----- Manajemen state & DOM -----
     const outputDiv = document.getElementById("magicOutput");
     const userInputField = document.getElementById("userInput");
     const randomFontBtn = document.getElementById("randomFontBtn");
+    const randomArrowBtn = document.getElementById("randomArrowBtn");
     const randomSpecialBtn = document.getElementById("randomSpecialBtn");
     const applyUserBtn = document.getElementById("applyUserBtn");
     const sampleChips = document.querySelectorAll(".chip-word");
     
-    let currentRawText = "𝐀𝐠𝐚𝐭𝐚 𝐂𝐫𝟒𝐬𝐡";  // teks dasar belum di style (bisa asli)
+    let currentRawText = "Agata Cr4sh";   // teks dasar (plain asli)
+    let currentStyledText = "";            // teks terakhir setelah transformasi font / arrow
     
-    // fungsi update tampilan berdasarkan teks mentah + terapkan gaya font acak (atau manual tetap, tapi kita gunakan saat acak)
-    function setRandomFontFromRaw() {
-        if (!currentRawText.trim()) currentRawText = "Agata Cr4sh";
-        let transformed = applyRandomFontStyle(currentRawText);
-        outputDiv.innerHTML = transformed;
-        // Animasi kilat
+    // perbarui output & simpan styled text
+    function updateOutputWithNewStyle(newStyledContent) {
+        outputDiv.innerHTML = newStyledContent;
+        currentStyledText = newStyledContent;
         outputDiv.classList.add('glint');
         setTimeout(() => outputDiv.classList.remove('glint'), 200);
     }
     
-    // tambahkan aksara ajaib ke output saat ini (tanpa merubah raw text, hanya menghias output now)
-    function addMagicalToCurrentDisplay() {
-        let currentDisplayText = outputDiv.innerText;
-        if (!currentDisplayText) currentDisplayText = "Agata";
-        let enchanted = addMagicalAccents(currentDisplayText);
-        outputDiv.innerHTML = enchanted;
-        outputDiv.classList.add('glint');
-        setTimeout(() => outputDiv.classList.remove('glint'), 200);
+    // acak font dari raw / teks basic (menimpa style saat ini, arrow hilang diganti font baru)
+    function randomizeFontOnly() {
+        let baseText = currentRawText;
+        let newStyled = applyRandomFontStyle(baseText);
+        updateOutputWithNewStyle(newStyled);
+        // setelah font random, currentStyledText reset, not mengandung arrow.
     }
     
-    // set raw text dari input user (menerima teks polos atau sudah berstyle)
+    // TAMBAH PANAH DI TENGAH KATA berdasarkan teks yang TAMPIL saat ini (currentStyledText)
+    // penting: arrow function mengambil teks yang ada (bisa sudah berisi ajaib/panah sebelumnya) lalu menambahkan panah segar.
+    function addArrowsToCurrent() {
+        let displayText = outputDiv.innerText;
+        if (!displayText || displayText === "") displayText = currentRawText || "Agata Cr4sh";
+        let textWithArrows = insertArrowsInMiddle(displayText);
+        updateOutputWithNewStyle(textWithArrows);
+        // jangan ubah currentRawText biar acak font berikutnya based on raw
+    }
+    
+    // tambah aksara ajaib ke output saat ini (tidak mengganggu arrow, bisa overlapping)
+    function addMagicalToCurrent() {
+        let displayText = outputDiv.innerText;
+        if (!displayText) displayText = "Agata";
+        let enchanted = addMagicalAccents(displayText);
+        updateOutputWithNewStyle(enchanted);
+    }
+    
+    // set ulang raw text dari user, lalu terapkan gaya font random (bersih)
     function setRawFromUser() {
         let rawVal = userInputField.value;
         if (rawVal === "") rawVal = "Agata Cr4sh";
         currentRawText = rawVal;
-        // setelah ganti raw, langsung terapkan gaya acak (agar langsung muncul font unik)
-        let transformed = applyRandomFontStyle(currentRawText);
-        outputDiv.innerHTML = transformed;
-        outputDiv.classList.add('glint');
-        setTimeout(() => outputDiv.classList.remove('glint'), 200);
+        let freshStyled = applyRandomFontStyle(currentRawText);
+        updateOutputWithNewStyle(freshStyled);
     }
     
-    // handle chip sample: isi input & current raw lalu refresh (meniru set user)
+    // sample chip
     function loadSampleWord(e) {
         let word = e.currentTarget.getAttribute("data-word");
         if (word) {
             userInputField.value = word;
             currentRawText = word;
-            let transformed = applyRandomFontStyle(currentRawText);
-            outputDiv.innerHTML = transformed;
-            outputDiv.classList.add('glint');
-            setTimeout(() => outputDiv.classList.remove('glint'), 200);
+            let styled = applyRandomFontStyle(currentRawText);
+            updateOutputWithNewStyle(styled);
         }
     }
     
-    // Pre-decode untuk beberapa style awal: pada load, pastikan contoh mirip dengan gaya random pertama
-    // inisialisasi halaman
+    // inisiasi awal dengan style random + sedikit panah biar greget
     function init() {
-        // set raw awal: "𝐀𝐠𝐚𝐭𝐚 𝐂𝐫𝟒𝐬𝐡" tapi tanpa sengaja bisa pakai style random pertama
         currentRawText = "Agata Cr4sh";
-        // biar lebih greget langsung acak gaya
-        let initStyle = applyRandomFontStyle(currentRawText);
-        outputDiv.innerHTML = initStyle;
         userInputField.value = currentRawText;
-    
-        randomFontBtn.addEventListener("click", () => {
-            setRandomFontFromRaw();
-        });
-        randomSpecialBtn.addEventListener("click", () => {
-            addMagicalToCurrentDisplay();
-        });
-        applyUserBtn.addEventListener("click", () => {
-            setRawFromUser();
-        });
-        sampleChips.forEach(chip => {
-            chip.addEventListener("click", loadSampleWord);
-        });
+        let initStyled = applyRandomFontStyle(currentRawText);
+        // inisial tambahkan panah di tengah biar contoh langsung terlihat fitur barunya
+        let initWithArrow = insertArrowsInMiddle(initStyled);
+        updateOutputWithNewStyle(initWithArrow);
+        
+        randomFontBtn.addEventListener("click", randomizeFontOnly);
+        randomArrowBtn.addEventListener("click", addArrowsToCurrent);
+        randomSpecialBtn.addEventListener("click", addMagicalToCurrent);
+        applyUserBtn.addEventListener("click", setRawFromUser);
+        sampleChips.forEach(chip => chip.addEventListener("click", loadSampleWord));
     }
     
     init();
